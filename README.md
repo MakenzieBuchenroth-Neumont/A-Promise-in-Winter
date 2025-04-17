@@ -29,3 +29,12 @@ This project blends traditional **turn-based RPG mechanics** with an evolving **
 - Core systems (movement, dialogue, battle loop) are being prototyped.  
 - Art assets and character animations are in progress.  
 - First story chapter (The Cabin Arc) is in active design and testing.
+
+## 🗺️ Roadmap
+
+- Basic overworld navigation
+- Battle system MVP
+- Dialogue and choice system
+- Chapter 1 narrative implementation
+- Save/load system
+- Polish + FX
