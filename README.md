@@ -4,13 +4,13 @@ _A 2D pixel-art RPG with turn-based, magic-driven combat set in a world of frost
 
 ## 🎮 About the Game
 
-**A Promise in Winter** is a top-down 2D RPG developed in a 16x16 pixel art style. Set in the land of Pulchra, players follow **Emberlyn**, a young magic-user caught in a revolution against a tyrannical Usurper. Alongside a growing cast of allies, you'll fight Azax enforcers, uncover secrets of forbidden magic, and navigate tense, emotional bonds.
+**A Promise in Winter** is a top-down 2D RPG developed in a 16x16 pixel art style. Set in the land of Pulchia, players follow **Emberlyn**, a young magic-user caught in a revolution against a tyrannical Usurper. Alongside a growing cast of allies, you'll fight Azax enforcers, uncover secrets of forbidden magic, and navigate tense, emotional bonds.
 
 This project blends traditional **turn-based RPG mechanics** with an evolving **story-rich experience**, emphasizing character growth, magical strategy, and meaningful choice.
 
 ## ✨ Features
 
-- 🔹 **Top-Down Exploration**: Navigate the forests, towns, and ruins of Pulchra in charming 16x16 pixel art style.
+- 🔹 **Top-Down Exploration**: Navigate the forests, towns, and ruins of Pulchia in charming 16x16 pixel art style.
 - 🔹 **Turn-Based Combat**: Cast spells, manage mana, and chain elemental attacks with strategic positioning.
 - 🔹 **Magic System**: Learn and combine spells through books, training, and experimentation.
 - 🔹 **Emotional Storyline**: Follow Emberlyn’s personal growth, relationships, and role in the rebellion.
