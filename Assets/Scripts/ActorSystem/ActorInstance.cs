@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ActorData;
 
-public class ActorInstance {
+public class ActorInstance : IStatProvider {
 	public ActorData baseData;
 
 	public int level;
 	public int currentHP;
 	public int currentMP;
 	public int exp;
-
 	public Dictionary<EquipmentSlot, ItemData> equipment = new();
+
+	public int GetMaxHP() => baseData.maxHP;
+	public int GetMaxMP() => baseData.maxMP;
+	public int GetAttack() => baseData.attack;
+	public int GetDefense() => baseData.defense;
+	public int GetAgility() => baseData.agility;
+	public int GetLuck() => baseData.luck;
+
 	public List<string> tags = new(); // For class types, traits, etc.
 
 	public ActorInstance(ActorData data) {
