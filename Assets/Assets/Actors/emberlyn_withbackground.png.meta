@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      emberlyn_withbackground_0: -8845683949409607905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
