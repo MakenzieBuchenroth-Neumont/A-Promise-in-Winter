@@ -1,9 +1,8 @@
-using NUnit.Framework.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
 using static ActorData;
 
-public class ActorInstance : IStatProvider {
+public class ActorInstance : ICharacterStats {
 	public ActorData baseData;
 
 	public int level;

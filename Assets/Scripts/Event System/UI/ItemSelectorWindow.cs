@@ -21,7 +21,7 @@ public class ItemSelectorWindow : Singleton<ItemSelectorWindow> {
 		panelGroup.gameObject.SetActive(true);
 		panelGroup.DOKill();
 		panelGroup.alpha = 0;
-		panelGroup.DOFade(1f, 0.3f);
+		DOTween.To(() => panelGroup.alpha, x => panelGroup.alpha = x, 1f, 0.3f);
 		panelGroup.interactable = true;
 		panelGroup.blocksRaycasts = true;
 
@@ -59,13 +59,13 @@ public class ItemSelectorWindow : Singleton<ItemSelectorWindow> {
 
 	public void Hide() {
 		panelGroup.DOKill();
-		panelGroup.DOFade(0f, 0.2f).OnComplete(() =>
+		DOTween.To(() => panelGroup.alpha, x => panelGroup.alpha = x, 0f, 0.2f)
+			.OnComplete(() =>
 		{
 			panelGroup.gameObject.SetActive(false);
 		});
 		panelGroup.interactable = false;
 		panelGroup.blocksRaycasts = false;
-
 	}
 
 	private void Clear() {

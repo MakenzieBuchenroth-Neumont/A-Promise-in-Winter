@@ -20,18 +20,19 @@ public class ScrollingTextWindow : Singleton<ScrollingTextWindow> {
 
 		panelGroup.alpha = 0;
 		panelGroup.gameObject.SetActive(true);
-		panelGroup.DOFade(1f, 0.3f);
+		DOTween.To(() => panelGroup.alpha, x => panelGroup.alpha = x, 1f, 0.3f);
 
 		var rt = scrollingText.rectTransform;
 		rt.anchoredPosition = new Vector2(0, -600); // start below
 
-		currentTween = rt.DOAnchorPosY(600, scrollDuration)
+		currentTween = DOTween.To(() => rt.anchoredPosition.y, y => rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, y), 600f, scrollDuration)
 			.SetEase(Ease.Linear)
 			.OnComplete(() => {
-				panelGroup.DOFade(0f, 0.3f).OnComplete(() => {
-					panelGroup.gameObject.SetActive(false);
-					onComplete?.Invoke();
-				});
+				DOTween.To(() => panelGroup.alpha, x => panelGroup.alpha = x, 0f, 0.3f)
+					.OnComplete(() => {
+						panelGroup.gameObject.SetActive(false);
+						onComplete?.Invoke();
+					});
 			});
 
 		StartCoroutine(CheckForSpeedUp());
@@ -55,7 +56,8 @@ public class ScrollingTextWindow : Singleton<ScrollingTextWindow> {
 		}
 
 		// After skipping or completing, fade out
-		panelGroup.DOFade(0f, 0.3f).OnComplete(() =>
+		DOTween.To(() => panelGroup.alpha, x => panelGroup.alpha = x, 0f, 0.3f)
+			.OnComplete(() =>
 		{
 			panelGroup.gameObject.SetActive(false);
 			onCompleteCallback?.Invoke(); // will be assigned in Show()

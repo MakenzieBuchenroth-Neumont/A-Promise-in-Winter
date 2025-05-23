@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class BuffedStatProvider : IStatProvider {
-	private readonly IStatProvider source;
+public class BuffedStatProvider : ICharacterStats {
+	private readonly ICharacterStats source;
 	private readonly int bonusHP;
 	private readonly float attackMultiplier;
 
-	public BuffedStatProvider(IStatProvider source, int bonusHP = 0, float attackMultiplier = 1f) {
+	public BuffedStatProvider(ICharacterStats source, int bonusHP = 0, float attackMultiplier = 1f) {
 		this.source = source;
 		this.bonusHP = bonusHP;
 		this.attackMultiplier = attackMultiplier;

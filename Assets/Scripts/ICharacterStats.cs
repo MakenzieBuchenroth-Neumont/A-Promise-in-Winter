@@ -1,4 +1,4 @@
-public interface IStatsProvider {
+public interface ICharacterStats {
     int GetMaxHP();
     int GetMaxMP();
     int GetAttack();

@@ -106,24 +106,26 @@ public class InventoryMenuManager : MonoBehaviour {
 	}
 
 	private void DeselectItem() {
-		detailCanvasGroup.DOFade(0, 0.2f).OnComplete(() =>
+		DOTween.To(() => detailCanvasGroup.alpha, x => detailCanvasGroup.alpha = x, 0f, 0.2f)
+			.OnComplete(() =>
 		{
 			itemDetailPanel.SetActive(false);
 			tabHeaderPanel.SetActive(true);
 			tabCanvasGroup.alpha = 0;
-			tabCanvasGroup.DOFade(1, 0.2f);
+			DOTween.To(() => tabCanvasGroup.alpha, x => tabCanvasGroup.alpha = x, 1f, 0.2f);
 
 			RefreshInventoryDisplay();
 		});
 	}
 
 	private void ShowDetailPanel() {
-		tabCanvasGroup.DOFade(0, 0.2f).OnComplete(() =>
+		DOTween.To(() => tabCanvasGroup.alpha, x => tabCanvasGroup.alpha = x, 0f, 0.2f)
+			.OnComplete(() =>
 		{
 			tabHeaderPanel.SetActive(false);
 			itemDetailPanel.SetActive(true);
 			detailCanvasGroup.alpha = 0;
-			detailCanvasGroup.DOFade(1, 0.2f);
+			DOTween.To(() => detailCanvasGroup.alpha, x => detailCanvasGroup.alpha = x, 1f, 0.2f);
 		});
 	}
 

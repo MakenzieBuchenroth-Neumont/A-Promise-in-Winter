@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using DG.Tweening;
 
 public class GameInputManager : Singleton<GameInputManager> {
 	public KeyCode openInventoryKey = KeyCode.I;
@@ -12,6 +13,11 @@ public class GameInputManager : Singleton<GameInputManager> {
 
 	protected override void Awake() {
 		base.Awake();
+		
+		// Initialize DOTween
+		DOTween.Init(false, true, LogBehaviour.ErrorsOnly)
+			.SetCapacity(200, 50);
+		
 		LoadKeybindings();
 	}
 
